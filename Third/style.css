@@ -213,6 +213,7 @@ h5.title {
 	height: 94px;
 	width: 3px;
 	margin: 0 auto;
+	margin-top: -5px;
 	background: #F1F1F1;
 } 
 
