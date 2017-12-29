@@ -1,0 +1,133 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	height: 100%;
+ }
+
+body {
+	width: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none; 
+	box-sizing: border-box;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+.right{
+	float: right;
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.nav {
+	padding-top: 50px;
+	color: #ffffff;
+	font-family: "Open Sans - Semibold";
+	margin: 0 200px;
+}
+.nav li {
+	float: left;
+	margin-right: 35px;
+}
+
+.nav a {
+	text-transform: uppercase;
+	font: 13px Open Sans - Semibold;
+	color: #ffffff;
+}
+
+.nav li:last-child {margin-right: 0;}
+
+#header {
+	position: absolute;
+	padding: 50px 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: #101929 url(img/home-bg.jpg) no-repeat;
+	background-size: cover;
+}
+.btn {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #50c3af;
+	font: bold 15px PT Sans , sans-serif;
+	margin-bottom: 120px;
+	padding: 18px 45px;
+	cursor: pointer;
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+#home h1 {
+	text-transform: uppercase;
+	font: 53px Ubuntu , sans-serif;
+}
+#home h3 {
+	padding-top: 43px;
+	text-transform: uppercase;
+	font: 15px PT Sans , sans-serif ;
+	margin-bottom: 100px;
+}
+#home {
+	color: #ffffff;
+	padding-top: 80px;
+	height: 580px;
+	text-align: center;
+}
+.box {
+	padding: 55px 0;
+}
+#servises {
+	text-align: center;
+}
+h5.title {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font: bold 16px/16px PT Sans, sans-serif;
+	color: #40474e;
+}
+.servises-item {
+	font-size: 14px;
+	color: #787b80;
+}
