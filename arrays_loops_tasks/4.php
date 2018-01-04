@@ -1,4 +1,8 @@
 <?php
+/* Дан массив $arr. С помощью первого цикла foreach выведите на экран столбец ключей, с
+помощью второго — столбец элементов.
+$arr = array('green'=>'зеленый', 'red'=>'красный','blue'=>'голубой');*/
+
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf-8');
 
