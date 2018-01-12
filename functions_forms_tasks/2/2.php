@@ -4,17 +4,17 @@
 Реализовать с помощью функции.*/
 include "index.html";
 $a_long_words = $_POST['a'];
-$result = test($a_long_words);
+$result = $a_long_words;
 
 function test($a_long_words){
-    $words = explode(' ', $a_long_words);
-    foreach ($words as $word){
+    $result = explode(' ', $a_long_words);
+    foreach ($result as $word){
         $result[$word] = mb_strlen($word);
         arsort($result);
-        $result = array_slice($result,0,3);
     }
+    return (array_slice($result,0,3));
 }
-print_r($result);
+print_r (test($a_long_words));
 
 
 
