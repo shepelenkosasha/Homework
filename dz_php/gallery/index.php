@@ -32,7 +32,7 @@
             <?php foreach ($groups as $group) : ?>
                 <p>
                     <?php foreach ($group as $file) : ?>
-                        <img src=<?="/gallery/img/$file"?> width="100px">
+                        <img src=<?="/gallery/img/$file"?> width="200px">
                     <?php endforeach;?>
                 </p>
             <?php endforeach;?>
