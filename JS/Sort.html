@@ -1,0 +1,49 @@
+﻿<!--
+
+            sort() - Сортирует элементы массива в алфавитном порядке 
+            (при необходимости временно преобразуя элементы в строки для выполнения сравнения).
+
+-->
+
+<html>
+<head>
+    <title>Метод sort() сортировка массива</title>
+
+    <script type="text/javascript">
+
+        var i = [1, 4, 11, 2, 9, 99,111, 5];
+
+        i.sort(function(a,b){
+        	return a - b;
+        });	
+        document.write(i.join("<p>"));
+
+
+        document.write("<hr/>");
+
+        var j = [8, 45, 56, 211, 9, 32,466, 5455];
+
+        j.sort(function(a,b){
+        	if (a > b){
+        		return 1;
+        	}
+        	if(a < b){
+        		return -1;
+        	}
+        	return 0;
+        });	
+        document.write(j.join("<p>"));
+
+        document.write("<hr/>");
+
+        var s = ["January", "February", "March", "April", "May"];
+
+        s.sort();
+        document.write(s.join("<p>"));
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

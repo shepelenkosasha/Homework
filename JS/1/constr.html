@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Constructor</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			
+			function Automobile(manufact, model, year, color){
+				this.manufact = manufact;
+				this.model = model;
+				this.year = year;
+				this.color = color;
+
+				this.whatColor = function(){
+					document.write(this.color + '<br>' + '<hr>');
+				};
+
+				this.autoInfo = function(){
+					document.write(this.manufact + '<br>' + this.model + '<br>' + this.year + '<br>');
+				};
+			}
+
+			var firstAuto = new Automobile(
+				'Nissan',
+				'Skyline', 
+				'2007', 
+				'Красный'
+				);
+			var secondAuto = new Automobile(
+				'Toyota ',
+				'Corolla ', 
+				'2009 ', 
+				'Черный'
+				);
+			var thirdAuto = new Automobile(
+				'Volkswagen ',
+				'Golf ', 
+				'2009 ', 
+				'Синий'
+				);
+			firstAuto.autoInfo();
+			firstAuto.whatColor();
+			secondAuto.autoInfo();
+			secondAuto.whatColor();
+			thirdAuto.autoInfo();
+			thirdAuto.whatColor();
+
+			function Driver(name, experience, manufact, model, year, color){
+				this.name = name;
+				this.experience = experience;
+				this.manufact = manufact;
+				this.model = model;
+				this.year = year;
+				this.color = color;
+
+				this.driverInfo = function(){
+					document.write(this.name + '<br>' + this.experience + '<br>' );
+				};
+
+				this.whatColor = function(){
+					document.write(this.color + '<br>');
+				};
+
+				this.autoInfo = function(){
+					document.write(this.manufact + '<br>' + this.model + '<br>' + this.year + '<br>');
+				};
+			}
+
+			var user = new Driver(
+				'Дмитрий',
+				'3',
+				'Ford',
+				'Focus',
+				'2010',
+				'Белый'
+				);
+			user.driverInfo();
+			user.autoInfo();
+			user.whatColor();
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

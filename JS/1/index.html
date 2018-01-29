@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Program</title>
+		<script type="text/javascript">
+			
+			var list = [];
+			var person = {
+				userName : '',
+				userSName : '',
+				userAge : '',
+				userSex : '',
+				userProgLang : []
+			};
+
+			function askPerson(){
+				person.userName = prompt("Введите имя пользователя","Иван");
+				person.userSName = prompt("Введите фамилию пользователя","Иванов");
+				person.userAge = prompt("Введите возраст пользователя","25");
+				person.userSex = prompt("Введите пол пользователя","мужской");
+				person.userProgLang = prompt("Введите языки программирования","JS,PHP");
+				list.push(person);
+			};
+			
+
+			function doc(){
+				document.write('<table border = "2">');
+				
+				document.write('<tr>');
+				document.write('<td>' + list+ '<\/td>');
+				document.write('<\/tr>');
+							
+				document.write('<\/table>');
+			};
+			
+			
+			do {
+            	askPerson();
+				doc();
+            	repeater = confirm("Пройти заполнение еще раз?");
+        	} while (repeater);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
