@@ -1,0 +1,73 @@
+#arrow {
+	height: 100%;
+	background: url("arrow.png") no-repeat center top;
+	width: 5px;
+	position: absolute;
+	left: 45.5%;
+	margin-top: 52px;
+	transform-origin: 0px 7px 0px;
+	transform: rotate(-0deg);
+}
+#btn_start {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #0DFA00;
+	font: bold 20px PT Sans , sans-serif;
+	margin-bottom: 120px;
+	padding: 16px 45px;
+	cursor: pointer;
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+#btn_start:hover{
+	color: #000000;
+}
+#btn_stop {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #FA000C;
+	font: bold 20px PT Sans , sans-serif;
+	margin-bottom: 120px;
+	padding: 16px 45px;
+	cursor: pointer;
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+#btn_stop:hover{
+	color: #000000;
+}
+#btn_reset {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #FADD00;
+	font: bold 20px PT Sans , sans-serif;
+	margin-bottom: 120px;
+	padding: 18px 45px;
+	cursor: pointer;
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+#btn_reset:hover{
+	color: #000000;
+}
+#time {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 135px;
+	font-size: 26px;
+	right: 16px;
+}
+#timer {
+	width: 450px;
+	height: 450px;
+	background: url('clock.jpg') no-repeat;
+	position: relative;
+}
+#display {
+	margin-left: 310px;
+}
+.btn {
+	margin-left: -25px;
+	position: absolute;
+}

@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+    <title>CallBack Function</title>
+
+    <script type="text/javascript">
+
+        var x = parseInt(prompt("Введите значение" , "Сюда"));
+        var y = parseInt(prompt("Введите значение" , "Сюда"));
+        var z = prompt("Введите арифметическую операцию" , "Сюда");
+
+        var add = function (x, y) {
+            return x + y;
+        };
+
+        var sub = function (x, y) {
+            return x - y;
+        };
+
+        var mul = function (x, y) {
+            return x * y;
+        };
+
+        var div = function (x, y) {
+            return x / y;
+        };
+
+        function show(callBackFunction, x, y) {
+
+            var result = callBackFunction(x, y);
+            document.write("<p>" + result);
+
+        };
+
+        show();
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

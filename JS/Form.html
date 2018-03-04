@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			input.invalid {
+	            border: none;
+	            border-bottom: 1px solid red;
+	            outline: none;
+	        }
+	        input.valid {
+	            background-color: #81e569;
+	        }
+	        .form111 {
+	        	position: relative;
+	        }
+	        .msg {
+	        	position: absolute;
+            	left: 0;
+	        }
+	        .btn_reg{
+	        	background: #fff;
+			    color: #0000FA;
+			    padding: 17px 20px;
+			    display: inline-block;
+			    line-height: 1.2;
+			    font-weight: 600;
+			    min-width: 186px;
+			    text-align: center;
+			    text-transform: uppercase;
+			    text-decoration: none;
+			    user-select: none;
+			    cursor: pointer;
+			    border-radius: 30px;
+	        }
+	        
+	        .allform1{
+	        	width: 240px;
+	        	position: relative;
+			    flex: 0 0 auto;
+			    margin: auto;
+			    box-shadow: 0 15px 25px hsla(34,3%,50%,.07);
+			    border-radius: 5px;
+			    background-color: #fff;
+			    cursor: default;
+			    z-index: 2;
+			    padding-top: 59px;
+			    visibility: visible;
+	        }
+	        .allform{
+	        	width: 240px;
+	        	position: relative;
+			    flex: 0 0 auto;
+			    margin: auto;
+			    box-shadow: 0 15px 25px hsla(34,3%,50%,.07);
+			    border-radius: 5px;
+			    background-color: #fff;
+			    cursor: default;
+			    z-index: 2;
+			    padding-top: 59px;
+			    visibility: hidden;
+	        }
+	        .close{
+	        	position: absolute;
+			    top: 18px;
+			    right: 16px;
+			    font-size: 15px;
+			    color: #dededb;
+	        }
+	        .div_form{
+	        	margin-top: 15px;
+	        }
+	        .div1{
+	        	position: relative;
+	        }
+			.labl{
+				color: #0000FA;
+			}
+			.inp_btn{
+				background: #fff;
+			    color: #0000FA;
+			    padding: 7px 8px;
+			    display: inline-block;
+			    line-height: 1.2;
+			    font-weight: 600;
+			    text-align: center;
+			    text-transform: uppercase;
+			    cursor: pointer;
+			    border-radius: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="registration">
+			<button class="btn_reg" onclick="reClass()">
+				<span class="span_reg">Зарегистрироваться</span>
+			</button>
+		</div>
+		<div class="allform">
+			<button class="close"></button>
+			<div class="form111">
+				<form name="myForm" class="myform">
+					<div class="div_form">
+						<div class="div1">
+							<label for="form_tel" class="labl">Введите телефон</label>
+							<div>
+								<input type="tel" name="phone" placeholder="+380 XX XXX XX XX" id="form_tel" class="telph">
+							</div>
+							<span id="msg"></span>
+						</div>
+					</div>
+					<div class="div_form">
+						<div class="div1">
+							<label for="form_email" class="labl">Введите email</label>
+							<div>
+								<input type="email" name="email" placeholder="example@example.com" id="form_email" class="em">
+							</div>
+							<span id="msg"></span>
+						</div>
+					</div>
+					<div class="div_form">
+						<div class="div1">
+							<label for="form_pass" class="labl">Создайте пароль</label>
+							<div>
+								<input type="password" name="password" id="form_pass" class="passw">
+							</div>
+							<span id="msg"></span>
+						</div>
+					</div>
+					<div class="div_form">
+						<div class="div1">
+							<label for="re_pass" class="labl">Введите пароль повторно</label>
+							<div>
+								<input type="password" name="confpassword" id="re_pass" class="confpass">
+							</div>
+							<span id="msg"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<footer>
+				<div>
+					<input type="submit" name="sendler" class="inp_btn">
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			window.addEventListener("load", init, false);
+
+			function init() {
+			    myForm.phone.onchange = phoneOnChange;
+			    myForm.email.onchange = emailOnChange;
+			    myForm.password.onchange = passwordOnChange;
+			    myForm.confpassword.onchange = confpasswordOnChange;
+			    myForm.onsubmit = sendlerOnChange;
+			}
+			function validate(elem, pattern) {
+			    console.log(elem.value);
+			    var res = pattern.test(elem.value);
+			    if (res == false) elem.className = "invalid";
+			    else elem.className = "valid";
+			}
+			function phoneOnChange() {
+			    validate(this, /\+38\d{2}-\d{3}-\d{2}-\d{2}/);
+			}
+			function emailOnChange() {
+			    validate(this, /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i);
+			}
+			function passwordOnChange() {
+			    validate(this, /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/);
+			}
+			function confpasswordOnChange() {
+			    validate(this, /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/);
+			}
+
+			function sendlerOnChange() {
+
+			    var invalid = false;
+
+			    for (var i = 0; i < form1.elements.length; ++i) {
+			        var e = form1.elements[i];
+			        
+			        if (e.type == "text" && e.onchange) {
+			            e.onchange(); 
+			            if (e.className == "invalid") invalid = true;
+			        }
+			    }
+
+			    if (invalid) {
+			        alert("Допущены ошибки при заполнении формы.");
+			        return false; 
+			    }
+			}
+			function reClass() {
+				var elem = getElementByClass('allform');
+				for (var i = 0; i < elem.length; i++) {
+					elem[i].className = elem[i].className.replace('allform', 'allform1');
+				}
+			}
+		</script>
+	</body>
+</html>
